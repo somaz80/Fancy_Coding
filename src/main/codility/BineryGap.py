@@ -21,13 +21,6 @@ class Solution(object):
     def binaryGapTwo(self, N):
         print(self.get_binary_value(N))
 
-    def get_binary_value(N):
-
-        if N > 1:
-            get_binary_value(N >> 1) & 1
-            print('value of N', N)
-
-
 
     def get_factorial(self, n):
         i = 1
@@ -81,7 +74,7 @@ class Solution(object):
         print (A[:-K])
         return A[-K:] + A[:-K]
 
-    def whatisthis(self,n):
+    def whatisthis(self, n):
         print(n // 2)
 
     # main method for standalone run
