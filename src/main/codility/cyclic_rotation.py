@@ -1,10 +1,3 @@
-from time import time
-
-'''
-    This is a cache node class it knows start next and time to live
-'''
-
-
 class BulbNode:
     def __init__(self, next=None, prev=None, key=None, data=None, ttl=20):
         self.next = next  # reference to next node in DLL
@@ -149,47 +142,3 @@ class BulbArray:
                 a_node = a_node.next
         return return_data_array
 
-
-
-    def turn_on_key(self, key=None):
-        if self.start_node is None:
-            print("CacheList has no element")
-            return False
-        if self.start_node.key == key:
-            self.start_node.data = True
-            print('Turned on bulb: ', 1)
-            return True
-
-        else:
-            a_node = self.start_node
-            while a_node is not None:
-                if a_node.key == key:
-                    if a_node.prev.data is True:
-                        a_node.data = True
-                        print('Turned on bulb: ', a_node.key)
-                    else:
-                        print('This bulb will remain off: ', a_node.key)
-                    return True
-                a_node = a_node.next
-
-
-if __name__ == '__main__':
-    new_linked_list = BulbArray()
-    new_linked_list.insert_at_start(6, False)
-    new_linked_list.insert_at_start(5, False)
-    new_linked_list.insert_at_start(4, False)
-    new_linked_list.insert_at_start(3, False)
-    new_linked_list.insert_at_start(2, False)
-    new_linked_list.insert_at_start(1, False)
-    new_linked_list.traverse_list()
-    new_linked_list.turn_on_key(3)
-    new_linked_list.turn_on_key(4)
-    new_linked_list.turn_on_key(1)
-    new_linked_list.turn_on_key(2)
-    new_linked_list.turn_on_key(5)
-    # new_linked_list.turn_on_key(5)
-    # new_linked_list.turn_on_key(6)
-    # new_linked_list.turn_on_key(4)
-    # new_linked_list.turn_on_key(6)
-    # new_linked_list.turn_on_key(5)
-    # new_linked_list.turn_on_key(6)

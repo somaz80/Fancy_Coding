@@ -188,16 +188,51 @@ def reverse_words_in_string(input_string):
         print(list_words[i][::-1], end=' ')
 
 
+def fibonnaci(input_number):
+    a = 0
+    b = 1
+    for i in range(input_number + 1):
+        print(a)
+        c = a + b
+        a = b
+        b = c
+
+
+def fibonnaci_recur(input_number):
+    if input_number <= 1:
+        return input_number
+    else:
+        return fibonnaci_recur(input_number - 1) + fibonnaci_recur(input_number - 2)
+
+def factor_recur(input_number):
+    if input_number == 1:
+        return input_number
+    else:
+        return input_number * factor_recur(input_number-1)
+
+
+def power_get(number_input):
+    number_output = 1
+    for i in range(number_input+1):
+        number_output = number_output * 5
+    return number_output
+
+
+def get_magic_number(number_input):
+    print(format(5, 'b'))
+    list_val = format(number_input, 'b')
+    #print(len(list_val))
+    length_string = len(list_val)
+    magic_number = 0
+    for i in range(length_string-1, -1, -1):
+        if int(list_val[i]) == 1:
+            magic_number = magic_number + power_get(i)
+        else:
+            magic_number = magic_number + 0
+    print(magic_number)
+
 def main():
-    #print_stars()
 
-    #print_odd_stars_diamond(5)
-    #print_numbers_pyramid_progressive_right_aligned(6)
-
-    reverse_words_in_string('geeks for geeks')
-    print()
-    print()
-   # print_stars(8)
 
 
 if __name__ == '__main__':
