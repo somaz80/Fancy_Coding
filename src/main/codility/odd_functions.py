@@ -233,7 +233,5 @@ def get_magic_number(number_input):
 
 def main():
 
-
-
 if __name__ == '__main__':
     main()

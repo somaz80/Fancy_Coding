@@ -4,10 +4,10 @@ class Solution(object):
         self.zero_count = 0
         self.str_binary = ''
 
-    def binaryGap(self, N):
-        indices = [bit for bit, x in enumerate(f'{N:0b}') if x == '1']
-        lengths = (end - beg for beg, end in zip(indices, indices[1:]))
-        return max(lengths, default=1) - 1
+    # def binaryGap(self, N):
+    #     indices = [bit for bit, x in enumerate(f'{N:0b}') if x == '1']
+    #     lengths = (end - beg for beg, end in zip(indices, indices[1:]))
+    #     return max(lengths, default=1) - 1
 
     def binaryGapOne(self, N):
 
@@ -65,13 +65,14 @@ class Solution(object):
         return final_set.difference(unique_list), duplicate, unique_list
 
     def cyclic_rotation(self, A, K):
-        print(A)
+        print(A , K)
         if len(A) == 0:
             return A
-        K = K % len(A) - 1
+        print('Module', K % len(A))
+        K = K % len(A)
         print(K)
         print(A[-K:])
-        print (A[:-K])
+        print(A[:-K])
         return A[-K:] + A[:-K]
 
     def whatisthis(self, n):
@@ -82,10 +83,13 @@ def main():
     sol = Solution()
     arr = [3, 8, 9, 7, 6]
     counter = 3
-    A = [0, 0, 0]
+    A = [7, 6]
     K = 1
-    print(sol.cyclic_rotation(arr, counter))
-    sol.whatisthis(5)
+    #print(sol.cyclic_rotation(arr, 7))
+    sol.whatisthis(2)
+
+    #number_fmt = 111510
+    #print(len(max(format(number_fmt, 'b').strip('0').split('1'))))
 if __name__ == '__main__':
     main()
 
