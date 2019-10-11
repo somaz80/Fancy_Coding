@@ -52,6 +52,7 @@ def parse_string(input_string):
 
 def get_inner_parameter(input_string):
 
+
     return input_string[input_string.rfind('(') + 1:input_string.find(')')].split(',')
 
 def main():
@@ -71,6 +72,7 @@ def main():
     # str_output = get_string_inside_outermost_parentheses(str_output)
     #
     # print(str_output)
+
 
 if __name__ == '__main__':
     main()

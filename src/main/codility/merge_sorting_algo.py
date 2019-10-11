@@ -106,15 +106,16 @@ def gradingStudents(grades):
     return final_grades
 
 
+def migratoryBirds(arr):
+    bird_dict = {}
+    for i in range(len(arr)):
+        if arr[i] in bird_dict:
+            bird_dict[key] += 1
+    print(bird_dict)
+
 def main():
-    nlist = [14, 46, 43, 27, 57, 41, 45, 21, 70]
-    narray = [82,49,82,82,41,82,15,63,38,25]
-    # merge_sort(nlist)
-    print(gradingStudents([4, 73, 67, 38, 33]))
-
-
-
-
+    nlist = [1, 4, 4, 4, 5, 3]
+    print(migratoryBirds(nlist)
 
 if __name__ == '__main__':
     main()

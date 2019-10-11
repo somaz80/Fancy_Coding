@@ -98,5 +98,7 @@ def main():
     row = title + ' - ' + year + ' ' + ' ' + rating
 
     print(row)
+
+
 if __name__ == '__main__':
     main()
