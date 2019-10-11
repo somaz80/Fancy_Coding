@@ -19,7 +19,7 @@ def sockMerchant(n, ar):
             dict_schoc[temp_eml] = 1
 
     for key, value in dict_schoc.items():
-        if value > 2:
+        if value >= 2:
             even_soc += value//2
     return even_soc
 
